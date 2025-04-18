@@ -1,38 +1,34 @@
-# sv
+# Application SvelteKit
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Ce dépôt contient le code source d'une application SvelteKit développée dans le cadre d'une série de tutoriels sur YouTube.
 
-## Creating a project
+## Vidéos disponibles
 
-If you're seeing this, you've probably already done this step. Congrats!
+1. **Création de l'application de base** - [Mise en place du projet SvelteKit et configuration initiale](https://youtu.be/DoJqLnP2Dhsy)
+2. **Système d'authentification** - [Implémentation d'un système d'authentification complet](https://youtu.be/g4WZ8TxuJIo)
 
-```bash
-# create a new project in the current directory
-npx sv create
+## Prochainement
 
-# create a new project in my-app
-npx sv create my-app
-```
+- **Système de paiement** - Intégration d'un système de paiement (à venir)
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Installation
 
 ```bash
-npm run dev
+# Cloner le dépôt
+git clone <url-du-dépôt>
+cd <nom-du-dossier>
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+# Installer les dépendances
+npm i -g pnpm
+pnpm i
+node db.js
+
+# Lancer le serveur de développement
+pnpm run dev
 ```
 
-## Building
+## Technologies utilisées
 
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+- [SvelteKit](https://svelte.dev/)
+- [SQLite](https://www.npmjs.com/package/better-sqlite3)
+- [Lucia-Auth](https://lucia-auth.com/)
