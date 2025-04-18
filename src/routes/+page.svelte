@@ -5,6 +5,10 @@
 
 <h1>Liste de courses</h1>
 
+<form action="?/logout" method="POST">
+	<button type="submit"> Se déconnecter </button>
+</form>
+
 {#each courses as item}
 	<p>{item.article}</p>
 	<form action="?/deleteitem" method="POST">
