@@ -3,6 +3,7 @@ import { db } from './db';
 import { sha256 } from '@oslojs/crypto/sha2';
 import { Google } from 'arctic';
 import { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET } from '$env/static/private';
+import { PUBLIC_DOMAIN } from '$env/static/public';
 
 export function generateSessionToken() {
 	const bytes = new Uint8Array(20);
@@ -89,5 +90,5 @@ export function deleteSessionTokenCookie(event) {
 export const google = new Google(
 	GOOGLE_CLIENT_ID,
 	GOOGLE_CLIENT_SECRET,
-	'http://localhost:5173/login/google/callback'
+	PUBLIC_DOMAIN + '/login/google/callback'
 );
