@@ -21,3 +21,8 @@
 	<input type="text" name="article" id="article" />
 	<button type="submit">Ajouter</button>
 </form>
+
+<h2>API KEY</h2>
+<p>
+	{data.apikey}
+</p>

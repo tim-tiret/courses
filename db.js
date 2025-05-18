@@ -8,7 +8,8 @@ CREATE TABLE user (
     id INTEGER NOT NULL PRIMARY KEY,
     google_id TEXT NOT NULL,
     email TEXT NOT NULL,
-    username TEXT NULL
+    username TEXT NULL,
+    apikey TEXT
 );
 
 

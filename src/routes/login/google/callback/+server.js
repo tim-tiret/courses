@@ -47,10 +47,19 @@ export async function GET(event) {
 		});
 	}
 
+	function createRandomString(length) {
+		const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+		let result = '';
+		for (let i = 0; i < length; i++) {
+			result += chars.charAt(Math.floor(Math.random() * chars.length));
+		}
+		return result;
+	}
+
 	// TODO: Replace this with your own DB query.
 	const user = db
-		.prepare('INSERT INTO user (google_id, email, username) VALUES (?,?,?)')
-		.run([googleUserId, email, username]);
+		.prepare('INSERT INTO user (google_id, email, username, apikey) VALUES (?,?,?,?)')
+		.run([googleUserId, email, username, createRandomString(40)]);
 
 	console.log(user);
 

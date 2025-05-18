@@ -12,7 +12,10 @@ export function load({ locals }) {
 	const listedecourse = connection
 		.prepare('SELECT * FROM list WHERE user_id = ?')
 		.all([locals.user.id]);
-	return { courses: listedecourse };
+
+	const users = connection.prepare('SELECT apikey FROM user WHERE id = ?').all([locals.user.id]);
+
+	return { courses: listedecourse, apikey: users[0].apikey };
 }
 
 export const actions = {
