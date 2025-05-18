@@ -28,7 +28,10 @@
 	"dependencies": {
 		"@oslojs/crypto": "^1.0.1",
 		"@oslojs/encoding": "^1.1.0",
+		"@sveltejs/adapter-node": "^5.2.12",
 		"arctic": "^3.6.0",
-		"better-sqlite3": "^11.8.1"
+		"better-sqlite3": "^11.8.1",
+		"dotenv": "^16.5.0",
+		"express": "^5.1.0"
 	}
 }
